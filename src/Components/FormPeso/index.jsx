@@ -23,8 +23,8 @@ const AreaInputs = () => {
 
     return(
         <>
-            <label htmlFor="peso">Peso: <input type="text" id="peso" placeholder="Peso em (kg) Ex. 70" value={peso} onChange={(e) => setPeso(e.target.value)}/></label>
-            <label htmlFor="altura">Altura: <input type="text" id="altura" placeholder="Altura em (cm) Ex. 170" value={altura} onChange={(e) => setAltura(e.target.value)}/></label>
+            <label htmlFor="peso">Peso: <input type="number" id="peso" placeholder="Peso em (kg) Ex. 70" value={peso} onChange={(e) => setPeso(e.target.value)}/></label>
+            <label htmlFor="altura">Altura: <input type="number" id="altura" placeholder="Altura em (cm) Ex. 170" value={altura} onChange={(e) => setAltura(e.target.value)}/></label>
             <button onClick={calcularImc}>Calcular</button>
             <h2>{mensagem}</h2>
         </>
