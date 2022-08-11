@@ -7,17 +7,21 @@ const AreaInputs = () => {
     const [mensagem, setMensagem] = useState('');
 
     function calcularImc(){
-        const alt = altura / 100;
+        if(altura > 0 && peso > 0){
+            const alt = altura / 100;
         const imc = peso / (alt * alt);
-        
-        if(imc < 18.6 ){
-            setMensagem("Você está abaixo do peso! Seu IMC é de: " + imc.toFixed(2));
-        } else if (imc >= 18.6 && imc < 24.9){
-            setMensagem("Você está no peso ideal! Seu IMC é de: " + imc.toFixed(2));
-        } else if(imc >= 24.9 && imc < 34.9){
-            setMensagem("Você está um pouco acima do peso! Seu IMC é de: " + imc.toFixed(2));
-        } else {
-            setMensagem("Obesidade! Seu IMC é de " + imc.toFixed(2));
+            
+            if(imc < 18.6 ){
+                setMensagem("Você está abaixo do peso! Seu IMC é de: " + imc.toFixed(2));
+            } else if (imc >= 18.6 && imc < 24.9){
+                setMensagem("Você está no peso ideal! Seu IMC é de: " + imc.toFixed(2));
+            } else if(imc >= 24.9 && imc < 34.9){
+                setMensagem("Você está um pouco acima do peso! Seu IMC é de: " + imc.toFixed(2));
+            } else {
+                setMensagem("Obesidade! Seu IMC é de " + imc.toFixed(2));
+            }
+        } else{
+            setMensagem("Digite valores válidos");
         }
     }
 
