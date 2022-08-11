@@ -5,6 +5,7 @@ const Titulo = () => {
     return(
         <>
             <h1>Calculadora IMC</h1>
+            <p>Vamos calcular seu IMC</p>
         </>
     );
 }

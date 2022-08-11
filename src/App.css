@@ -1,0 +1,24 @@
+.app{
+    align-items: center;
+    background: #F7FfFF;
+    color: #0B3142;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.areaDados{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+@media screen and (max-width: 425px) {
+    .areaDados{
+        width: 100%;
+        padding: 0 2.5rem;
+    }
+}
